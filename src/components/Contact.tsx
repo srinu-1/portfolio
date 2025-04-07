@@ -334,6 +334,17 @@ const Contact = () => {
               </Button>
             </Box>
           </Box>
+          <Box
+            sx={{
+              mt: 6,
+              textAlign: 'center',
+              color: 'text.secondary',
+            }}
+          >
+            <Typography variant="body1">
+              Made with ❤️ Srinivas Reddy
+            </Typography>
+          </Box>
         </motion.div>
       </Container>
     </Box>
