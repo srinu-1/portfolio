@@ -29,17 +29,22 @@ const certifications = [
   {
     name: 'AWS Course Completion Certificate',
     issuer: 'Amazon Web Services',
-    year: '2023',
   },
   {
     name: 'SQL Course Completion Certificate',
     issuer: 'Online Learning Platform',
-    year: '2023',
   },
   {
     name: 'Docker Course Completion Certificate',
     issuer: 'Online Learning Platform',
-    year: '2023',
+  },
+];
+
+const interests = [
+  {
+    name: 'Music & Reading',
+    description: 'In my free time, I enjoy listening to music and reading novels. Check out my Spotify playlist!',
+    link: 'https://open.spotify.com/user/31rjacphspbixrmd2r5qu5yq6hqe',
   },
 ];
 
@@ -150,11 +155,60 @@ const Education = () => {
                     <Typography variant="h6" sx={{ color: 'primary.main' }}>
                       {cert.name}
                     </Typography>
-                    <Typography variant="subtitle1" sx={{ color: 'text.secondary', mb: 1 }}>
+                    <Typography variant="subtitle1" sx={{ color: 'text.secondary' }}>
                       {cert.issuer}
                     </Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                      {cert.year}
+                  </Paper>
+                </motion.div>
+              ))}
+            </Box>
+            <Box>
+              <Typography
+                variant="h4"
+                component="h3"
+                sx={{ mb: 4, display: 'flex', alignItems: 'center', gap: 1 }}
+              >
+                <WorkspacePremiumIcon color="primary" />
+                Interests
+              </Typography>
+              {interests.map((interest, index) => (
+                <motion.div
+                  key={interest.name}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <Paper
+                    elevation={3}
+                    sx={{
+                      p: 3,
+                      mb: 3,
+                      borderRadius: 2,
+                      backgroundColor: 'background.paper',
+                    }}
+                  >
+                    <Typography variant="h6" sx={{ color: 'primary.main' }}>
+                      {interest.name}
+                    </Typography>
+                    <Typography variant="subtitle1" sx={{ color: 'text.secondary', mb: 1 }}>
+                      {interest.description}
+                    </Typography>
+                    <Typography 
+                      variant="body2" 
+                      component="a"
+                      href={interest.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      sx={{ 
+                        color: 'primary.main',
+                        textDecoration: 'none',
+                        '&:hover': {
+                          textDecoration: 'underline',
+                        }
+                      }}
+                    >
+                      Visit Spotify Profile
                     </Typography>
                   </Paper>
                 </motion.div>

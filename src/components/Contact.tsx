@@ -64,13 +64,13 @@ const Contact = () => {
       };
 
       console.log('Attempting to send email with:', {
-        serviceId: 'service_w2wnitk',
+        serviceId: 'service_u4mt98r',
         templateId: 'template_kf5bbnr',
         templateParams
       });
 
       const response = await emailjs.send(
-        'service_w2wnitk',
+        'service_u4mt98r',
         'template_kf5bbnr',
         templateParams,
         'AYnvBenPlxPLMITTW'
