@@ -320,7 +320,7 @@ const Contact = () => {
                 variant="contained"
                 size="large"
                 startIcon={<PhoneIcon />}
-                href="tel:+91878383041"
+                href="tel:+918978383041"
                 sx={{
                   width: '100%',
                   maxWidth: '300px',
@@ -330,7 +330,7 @@ const Contact = () => {
                   },
                 }}
               >
-                +91 878383041
+                +91 8978383041
               </Button>
             </Box>
           </Box>
